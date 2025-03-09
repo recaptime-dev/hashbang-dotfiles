@@ -4,4 +4,9 @@
 [hub]
         protocol = https
 
-# Your own customizations come here
+# Recap Time Squad's customizations here below this line.
+# Since it will be accessed by the crew, we'll generalize things behind
+# the scenes instead of by default pointing to @ajhalili2006.
+[user]
+        name = "Recap Time Squad Crew"
+        email = "squad@crew.recaptime.dev"
