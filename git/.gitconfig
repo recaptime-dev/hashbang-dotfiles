@@ -10,3 +10,19 @@
 [user]
         name = "Recap Time Squad Crew"
         email = "squad@crew.recaptime.dev"
+        signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC6NhOhnGT1yi90/+tTyb3F9XkCJWJGjGoqb7S2ETCQc"
+[gpg]
+  format = ssh
+
+[init]
+        defaultBranch = "main"
+[push]
+        autoSetupRemote = true
+
+# https://groups.google.com/g/binary-transparency/c/f-BI4o8HZW0?pli=1
+[fetch]
+        fsckobjects = true
+[receive]
+        fsckobjects = true
+[transfer]
+        fsckobjects = true

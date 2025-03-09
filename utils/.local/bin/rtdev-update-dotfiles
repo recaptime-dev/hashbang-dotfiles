@@ -16,6 +16,9 @@ fi
 
 echo "Updating dotfiles from repository..."
 git -C "$DOTFILES" fetch --all
-git -C "$DOTFILES" pull origin --ff-only || echo "Someone should fix the merge conflicts manually. Aborting"... && exit 1
+git -C "$DOTFILES" pull origin --ff-only || {
+    echo "Someone should fix the merge conflicts manually. Aborting..."
+    exit 1
+}
 stow -vvvv bash git gnupg hashbang ssh tmux weechat zsh utils
 echo "Done! Just relaunch the shell or resource them up and you are good to go!"
