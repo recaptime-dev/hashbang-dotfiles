@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -xeo pipefail
+
+# Check if stow is installed
+if ! command -v stow &> /dev/null; then
+    echo "Error: stow is not installed. Please install it first."
+    exit 1
+fi
+
+# Check if dotfiles directory exists
+if [ ! -d "$DOTFILES" ]; then
+    echo "Error: Dotfiles directory not found at $DOTFILES"
+    exit 1
+fi
+
+echo "Updating dotfiles from repository..."
+
+DOTFILES="$HOME/.dotfiles"
+
+git -C "$DOTFILES" fetch --all
+git -C "$DOTFILES" pull origin --ff-only || echo "Someone should fix the merge conflicts manually. Aborting"... && exit 1
+stow -vvvv bash git gnupg hashbang ssh tmux weechat zsh utils

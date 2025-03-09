@@ -117,5 +117,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export GOROOT="$HOME/.local/share/go" OPROXY=direct
-export PATH="$GOROOT/bin:$HOME/.deno/bin:$HOME/.cargo/bin:$PATH"
+export GOROOT="$HOME/.local/share/go" GOPROXY=direct EDITOR=nano VISUAL=nano
+export PATH="$GOROOT/bin:$HOME/.deno/bin:$HOME/.cargo/bin:$PATH" GOPATH="$GOROOT:/usr/share/go"

@@ -17,7 +17,7 @@
 ################################################################################
 
 source ~/.grml-etc-core/etc/zsh/zshenv
-export GOROOT="$HOME/.local/share/go" OPROXY=direct
-export PATH="$GOROOT/bin:$HOME/.deno/bin:$HOME/.cargo/bin:$PATH"
+export GOROOT="$HOME/.local/share/go" GOPROXY=direct VISUAL=nano EDITOR=nano
+export PATH="$GOROOT/bin:$HOME/.deno/bin:$HOME/.cargo/bin:$PATH" GOPATH="$GOROOT:/usr/share/go"
 
 # Your custom things come here
