@@ -6,13 +6,23 @@ Ghost, etc.).
 
 As a friendly reminder for the team, do not leak any keys or passwords in this repo.
 
+## Project info
+
+* License: MIT
+* Maintainers: @ajhalili2006
+* Forked from: <https://github.com/hashbang/dotfiles>
+* Canonical: <https://gitlab.com/recaptime-dev/infra/hashbang-dotfiles>
+* Mirrors:
+    * GitHub: <https://github.com/recaptime-dev/hashbang-dotfiles>
+* Stability Level: experimential
+
 ## Usage
 
 Once provisioned a Hashbang account for a RecapTime.dev project, just login and run the following
 script to do the work for you:
 
 ```bash
-curl -fsSL https://gitlab.com/recaptime-dev/infra/hasbang-dotfiles/raw/master/utils/.local/bin/rtdev-update-remotes | bash -
+curl -fsSL https://gitlab.com/recaptime-dev/infra/hashbang-dotfiles/raw/master/utils/.local/bin/rtdev-update-remotes | bash -
 ```
 
 You can also use them on your local Linux system or even insde the Dockerized version

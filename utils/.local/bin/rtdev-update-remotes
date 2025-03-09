@@ -2,7 +2,7 @@
 set -xeo pipefail
 
 GIT_REPO_FORK_URL="gitlab.com/recaptime-dev/infra/hashbang-dotfiles"
-UPSTREAM="https://github.com/hasbang/dotfiles"
+UPSTREAM="https://github.com/hashbang/dotfiles"
 
 if ! git -C "$HOME/.dotfiles" remote get-url upstream; then
   echo "Renaming origin remote to upstream"
