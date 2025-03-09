@@ -2,7 +2,9 @@
 
 Forked from <https://github.com/hashbang/dotfiles> with customizations for the
 Recap Time Squad Crew on its Hashbang shell accounts for projects (e.g. proxyparty,
-Ghost, etc.)
+Ghost, etc.).
+
+As a friendly reminder for the team, do not leak any keys or passwords in this repo.
 
 ## Usage
 

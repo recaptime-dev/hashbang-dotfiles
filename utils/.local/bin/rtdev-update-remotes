@@ -1,21 +1,17 @@
 #!/usr/bin/env bash
-set -eo pipefail
-
-if [[ $DEBUG != "" ]]; then
-  set -x
-fi
+set -xeo pipefail
 
 GIT_REPO_FORK_URL="gitlab.com/recaptime-dev/infra/hashbang-dotfiles"
 UPSTREAM="https://github.com/hasbang/dotfiles"
 
-if ! git remote get-url upstream; then
+if ! git -C "$HOME/.dotfiles" remote get-url upstream; then
   echo "Renaming origin remote to upstream"
   git -C "$HOME/.dotfiles" remote rename origin upstream
   echo "Adding git://$GIT_REPO_FORK_URL as new origin"
   git -C "$HOME/.dotfiles" remote add origin "https://$GIT_REPO_FORK_URL"
   git -C "$HOME/.dotfiles" remote set-url --push origin "ssh://git@$GIT_REPO_FORK_URL"
 else
-  echo "Reconfiguring things behind the scenes"
+  echo "Reconfiguring git remotes behind the scenes"
   git -C "$HOME/.dotfiles" remote set-url upstream "$UPSTREAM"
   git -C "$HOME/.dotfiles" remote set-url origin "https://$GIT_REPO_FORK_URL"
   git -C "$HOME/.dotfiles" remote set-url --push origin "ssh://git@$GIT_REPO_FORK_URL"
